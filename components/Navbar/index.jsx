@@ -4,7 +4,7 @@ import Link from "next/link";
 // Styled components
 import { StyledNavbar, NavbarWrapper, BrandContainer, StyledLink } from "./styles";
 // Utils
-import { routes } from "constants/_routes";
+import { routes } from "constants/routes";
 
 const Navbar = () => (
 	<StyledNavbar>
