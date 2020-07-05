@@ -25,12 +25,31 @@ export const NavbarWrapper = styled.div`
 	}
 `;
 
-export const BrandContainer = styled.div`
-	img {
-		width: 50px;
-	}
+export const BrandLogo = styled.img`
+	width: 50px;
+`;
+
+export const LinkContainer = styled.ul`
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 `;
 
 export const StyledLink = styled.a`
 	margin-left: ${theme.spacing[7]};
+`;
+
+export const IconButton = styled.button`
+	background-color: ${theme.colors.grayLight};
+	border: none;
+	color: ${theme.colors.textGray};
+	border-radius: 50%;
+	width: ${theme.spacing[8]};
+	height: ${theme.spacing[8]};
+	transition: box-shadow 0.25s ease, background-color 0.25s ease;
+	cursor: pointer;
+	&:hover {
+		background-color: ${theme.colors.secondary};
+		box-shadow: ${theme.shadows.main};
+	}
 `;
