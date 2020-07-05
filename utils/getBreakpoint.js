@@ -7,16 +7,16 @@ const getBreakpoint = () => {
 	let size;
 	const { width } = useWindowSize();
 	switch (true) {
-		case width <= parseInt(breakpoints.sm):
+		case width < parseInt(breakpoints.sm):
 			size = "xs";
 			break;
-		case width <= parseInt(breakpoints.md):
+		case width < parseInt(breakpoints.md):
 			size = "sm";
 			break;
-		case width <= parseInt(breakpoints.lg):
+		case width < parseInt(breakpoints.lg):
 			size = "md";
 			break;
-		case width <= parseInt(breakpoints.xl):
+		case width < parseInt(breakpoints.xl):
 			size = "lg";
 			break;
 		default:
