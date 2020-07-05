@@ -12,9 +12,9 @@ export const StyledNavbar = styled.nav`
 `;
 
 export const BrandContainer = styled.div`
-	display: block;
+	/* display: block; */
 `;
 
-export const StyledLink = styled(Link)`
-	color: inherit;
+export const StyledLink = styled.a`
+	/* color: inherit; */
 `;
