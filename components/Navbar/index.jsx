@@ -2,19 +2,22 @@
 import React from "react";
 import Link from "next/link";
 // Styled components
-import { StyledNavbar, BrandContainer, StyledLink } from "./styles";
+import { StyledNavbar, NavbarWrapper, BrandContainer, StyledLink } from "./styles";
 // Utils
-import { routes } from "constants/routes";
+import { routes } from "constants/_routes";
 
 const Navbar = () => (
 	<StyledNavbar>
-		<img src="img/logo.svg" alt="" />
-		<BrandContainer></BrandContainer>
-		{routes.map((route) => (
-			<Link key={route.path} href={route.path}>
-				<StyledLink>{route.label}</StyledLink>
-			</Link>
-		))}
+		<NavbarWrapper>
+			<BrandContainer>
+				<img src="img/logo.svg" alt="Logo" />
+			</BrandContainer>
+			{routes.map((route) => (
+				<Link key={route.path} href={route.path}>
+					<StyledLink>{route.label}</StyledLink>
+				</Link>
+			))}
+		</NavbarWrapper>
 	</StyledNavbar>
 );
 

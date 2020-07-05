@@ -1,9 +1,8 @@
-import "styles/global.scss";
+// Styled Components
 import { ThemeProvider } from "styled-components";
-
-const theme = {
-	colors: {},
-};
+// Styles
+import "styles/global.scss";
+import { theme } from "constants/theme";
 
 export default function MyApp({ Component, pageProps }) {
 	return (
