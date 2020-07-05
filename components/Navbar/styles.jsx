@@ -2,7 +2,7 @@
 import styled from "styled-components";
 // Utils
 import { CenteredContent } from "styles/utilities";
-import { theme } from "constants/theme";
+import { theme } from "styles/theme";
 
 export const StyledNavbar = styled.nav`
 	background-color: ${theme.colors.secondary};
