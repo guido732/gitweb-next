@@ -1,5 +1,5 @@
 // Styled Comps
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 // Utils
 import { CenteredContent } from "styles/utilities";
 import { theme } from "styles/theme";
@@ -29,14 +29,33 @@ export const BrandLogo = styled.img`
 	width: 50px;
 `;
 
-export const LinkContainer = styled.ul`
+export const DropdownContainer = styled.div`
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background: ${theme.colors.grayLight};
+	display: flex;
+	align-items: center;
+	justify-content: center;
+`;
+
+const VerticalList = css`
+	flex-direction: column;
+	margin-bottom: 5rem;
+`;
+
+export const LinkList = styled.ul`
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	${({ isMobile }) => isMobile && VerticalList}
 `;
 
 export const StyledLink = styled.a`
 	margin-left: ${theme.spacing[7]};
+	${({ isMobile }) => isMobile && "margin-left: 0"}
 `;
 
 export const IconButton = styled.button`
