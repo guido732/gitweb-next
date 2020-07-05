@@ -5,20 +5,27 @@ import Link from "next/link";
 import { StyledNavbar, NavbarWrapper, BrandContainer, StyledLink } from "./styles";
 // Utils
 import { routes } from "constants/routes";
+// Hooks
+import { useWindowSize } from "custom_hooks/useWindowSize";
 
-const Navbar = () => (
-	<StyledNavbar>
-		<NavbarWrapper>
-			<BrandContainer>
-				<img src="img/logo.svg" alt="Logo" />
-			</BrandContainer>
-			{routes.map((route) => (
-				<Link key={route.path} href={route.path}>
-					<StyledLink>{route.label}</StyledLink>
-				</Link>
-			))}
-		</NavbarWrapper>
-	</StyledNavbar>
-);
+const Navbar = () => {
+	console.log(useWindowSize());
+	return (
+		<StyledNavbar>
+			<NavbarWrapper>
+				<BrandContainer>
+					<img src="img/logo.svg" alt="Logo" />
+				</BrandContainer>
+				<div>
+					{routes.map((route) => (
+						<Link key={route.path} href={route.path}>
+							<StyledLink>{route.label}</StyledLink>
+						</Link>
+					))}
+				</div>
+			</NavbarWrapper>
+		</StyledNavbar>
+	);
+};
 
 export default Navbar;

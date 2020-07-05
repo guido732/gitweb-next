@@ -5,7 +5,7 @@ import { CenteredContent } from "styles/utilities";
 import { theme } from "styles/theme";
 
 export const StyledNavbar = styled.nav`
-	background-color: ${theme.colors.secondary};
+	background-color: ${theme.colors.grayLight};
 	width: 100%;
 	position: fixed;
 	top: 0;
@@ -19,15 +19,18 @@ export const NavbarWrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	padding: 0 2rem;
+	@media screen and (min-width: ${theme.breakpoints.lg}) {
+		padding: 0;
+	}
 `;
 
 export const BrandContainer = styled.div`
 	img {
 		width: 50px;
 	}
-	/* display: block; */
 `;
 
 export const StyledLink = styled.a`
-	/* color: inherit; */
+	margin-left: ${theme.spacing[7]};
 `;
