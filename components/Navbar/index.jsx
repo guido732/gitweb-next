@@ -5,25 +5,27 @@ import Link from "next/link";
 import { StyledNavbar, NavbarWrapper, BrandContainer, StyledLink } from "./styles";
 // Utils
 import { routes } from "constants/routes";
-import { isSM } from "custom_hooks/useRender";
+import { getBreakpoint } from "utils/getBreakpoint";
 
 const Navbar = () => {
-	const isSmall = isSM();
-
+	const isMobile = getBreakpoint() !== "xs";
 	return (
 		<StyledNavbar>
 			<NavbarWrapper>
 				<BrandContainer>
 					<img src="img/logo.svg" alt="Logo" />
 				</BrandContainer>
-				{isSmall && (
+				{isMobile ? (
 					<div>
+						pantalla mediana
 						{routes.map((route) => (
 							<Link key={route.path} href={route.path}>
 								<StyledLink>{route.label}</StyledLink>
 							</Link>
 						))}
 					</div>
+				) : (
+					<div>pantalla chica</div>
 				)}
 			</NavbarWrapper>
 		</StyledNavbar>
