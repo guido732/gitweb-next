@@ -1,0 +1,56 @@
+@font-face {
+	font-family: "Montserrat";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: local("Montserrat Bold"), local("Montserrat-Bold"), url("/public/fonts/montserrat-bold.woff2") format("woff2");
+}
+@font-face {
+	font-family: "Playfair Display";
+	font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+	src: url("/public/fonts/playfair-display.woff2") format("woff2");
+}
+@font-face {
+	font-family: "Source Sans Pro";
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: local("Source Sans Pro Light"), local("SourceSansPro-Light"),
+		url("/public/fonts/source-sans-pro.woff2") format("woff2");
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Montserrat", sans-serif;
+}
+
+a,
+a:hover,
+ul,
+li {
+	text-decoration: none;
+	list-style: none;
+	color: inherit;
+}
+
+%font-headings {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	color: $color-text-dark;
+}
+%font-serif {
+	font-family: "Playfair Display", serif;
+	color: $color-highlight;
+}
+%font-sans {
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 300;
+	transition-duration: 0.5s;
+}

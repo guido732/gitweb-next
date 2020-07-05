@@ -3,7 +3,7 @@ import React from "react";
 // Styles
 import { StyledFooter, Separator, MediaContainer, Media } from "./styles";
 
-const Footer = () => (
+export const Footer = () => (
 	<StyledFooter>
 		<div>{/* Main footer content */}</div>
 		<Separator horizontal />
@@ -18,5 +18,3 @@ const Footer = () => (
 		</div>
 	</StyledFooter>
 );
-
-export default Footer;
