@@ -3,8 +3,20 @@ import React, { useState } from "react";
 // Next
 import Link from "next/link";
 import Router from "next/router";
+// Components
+import Typography from "components/Typography";
 // Styled components
-import { StyledNavbar, NavbarWrapper, BrandLogo, LinkList, StyledLink, IconButton, DropdownContainer } from "./styles";
+import {
+	StyledNavbar,
+	NavbarWrapper,
+	BrandLogo,
+	LinkList,
+	LinkListItem,
+	StyledLink,
+	IconButton,
+	DropdownContainer,
+} from "./styles";
+
 // RTG
 // import { CSSTransition } from "react-transition-group";
 // https://dev.to/terrierscript/styled-component--react-transition-group--very-simple-transition-jja
@@ -48,11 +60,13 @@ const Navbar = () => {
 							<DropdownContainer>
 								<LinkList isMobile>
 									{routes.map((route) => (
-										<li key={route.path}>
+										<LinkListItem key={route.path}>
 											<StyledLink isMobile href={route.path} onClick={(e) => handleRoute(e, route)}>
-												{route.label}
+												<Typography size={7} variant="heading" element="span">
+													{route.label}
+												</Typography>
 											</StyledLink>
-										</li>
+										</LinkListItem>
 									))}
 								</LinkList>
 							</DropdownContainer>
@@ -61,11 +75,13 @@ const Navbar = () => {
 				) : (
 					<LinkList>
 						{routes.map((route) => (
-							<li key={route.path}>
+							<LinkListItem key={route.path}>
 								<StyledLink href={route.path} onClick={(e) => handleRoute(e, route)}>
-									{route.label}
+									<Typography size={4} variant="heading" element="span">
+										{route.label}
+									</Typography>
 								</StyledLink>
-							</li>
+							</LinkListItem>
 						))}
 					</LinkList>
 				)}
