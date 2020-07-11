@@ -1,5 +1,5 @@
 // Styled Comps
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 // Utils
 import { CenteredContent } from "styles/utilities";
 import { theme } from "styles/theme";
@@ -41,22 +41,29 @@ export const DropdownContainer = styled.div`
 	justify-content: center;
 `;
 
-const VerticalList = css`
-	flex-direction: column;
-	margin-bottom: 5rem;
-`;
-
 export const LinkList = styled.ul`
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	${({ isMobile }) => isMobile && VerticalList}
+	flex-direction: column;
+	margin-bottom: 5rem;
+	@media screen and (min-width: ${theme.breakpoints.sm}) {
+		margin-bottom: 0;
+		flex-direction: row;
+	}
 `;
 
-export const StyledLink = styled.a`
-	margin-left: ${theme.spacing[7]};
-	${({ isMobile }) => isMobile && "margin-left: 0"}
+export const LinkListItem = styled.li`
+	display: block;
+	margin-bottom: 2rem;
+	@media screen and (min-width: ${theme.breakpoints.sm}) {
+		display: initial;
+		margin-bottom: 0;
+		margin-left: ${theme.spacing[7]};
+	}
 `;
+
+export const StyledLink = styled.a``;
 
 export const IconButton = styled.button`
 	background-color: ${theme.colors.grayLight};

@@ -18,7 +18,7 @@ const fontSans = css`
 	font-weight: 300;
 `;
 
-const getFontStyle = (variant) => {
+const getFontStyle = ({ variant }) => {
 	switch (variant) {
 		case "heading":
 			return fontHeadings;
