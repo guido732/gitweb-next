@@ -7,7 +7,7 @@ export const StyledContainer = styled.main`
 	width: 100%;
 	max-width: ${theme.breakpoints.lg};
 	margin: 0 auto;
-	margin-top: 4rem;
+	margin-top: 8rem;
 	padding: 0 2rem;
 	@media screen and (min-width: ${theme.breakpoints.lg}) {
 		padding: 0;

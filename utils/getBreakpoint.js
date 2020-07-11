@@ -1,5 +1,5 @@
 // Hooks
-import { useWindowSize } from "custom_hooks/useWindowSize";
+import { useWindowSize } from "hooks/useWindowSize";
 // Theme
 import { breakpoints } from "styles/_breakpoints";
 
