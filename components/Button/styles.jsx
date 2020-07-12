@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import { theme } from "styles/theme";
 
 export const StyledButton = styled.button`
-	display: block;
+	display: inline-block;
 	padding: ${theme.spacing[4]} ${theme.spacing[6]};
 	background-color: ${theme.colors.textDark};
 	color: white;
@@ -13,7 +13,9 @@ export const StyledButton = styled.button`
 	text-transform: uppercase;
 	border: none;
 	transition: background-color 0.3s ease;
+	cursor: pointer;
 	&:hover {
 		background-color: ${theme.colors.highlight};
+		color: white;
 	}
 `;

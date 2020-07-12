@@ -1,21 +1,16 @@
 // React
 import React from "react";
 // Next
-import Link from "next/link";
-// Components
-import Button from "components/Button";
+import Router from "next/router";
 // Styles
-import {
-	StyledCta,
-	CtaContent,
-	HeaderContainer,
-	StyledHeader,
-	StyledSubHeader,
-	StyledSeparator,
-	StyledLink,
-} from "./styles";
+import { StyledCta, CtaContent, HeaderContainer, StyledHeader, StyledSubHeader, StyledSeparator } from "./styles";
+import Button from "components/Button";
 
 export const CallToAction = () => {
+	const handleClick = (e) => {
+		e.preventDefault();
+		Router.push("/contact");
+	};
 	return (
 		<StyledCta>
 			<CtaContent>
@@ -26,9 +21,9 @@ export const CallToAction = () => {
 					<StyledSeparator direction="horizontal" size={1} />
 				</HeaderContainer>
 				<StyledSubHeader variant="sans">No dudes en contactarme!</StyledSubHeader>
-				<Link href="/contact" passHref>
-					<StyledLink>Contactame</StyledLink>
-				</Link>
+				<Button as={"a"} href="/contact" onClick={handleClick}>
+					Contactame
+				</Button>
 			</CtaContent>
 		</StyledCta>
 	);

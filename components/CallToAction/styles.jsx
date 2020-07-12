@@ -36,5 +36,3 @@ export const StyledSubHeader = styled(Typography)`
 export const StyledSeparator = styled(Separator)`
 	margin-bottom: ${theme.spacing[2]};
 `;
-
-export const StyledLink = styled(Button)``;
