@@ -1,5 +1,7 @@
 // React
 import React from "react";
+// Next
+import Link from "next/link";
 // Icons
 import { GitHub, Codepen, Linkedin, Phone } from "react-feather";
 // Styles
@@ -10,14 +12,12 @@ import {
 	StyledLink,
 	StyledHeader,
 	StyledText,
-	Separator,
+	StyledSeparator,
 	BottomContainer,
 	Copyright,
 	MediaContainer,
 	Media,
 } from "./styles";
-import Typography from "components/Typography/index";
-import Link from "next/link";
 
 export const Footer = () => {
 	return (
@@ -59,7 +59,7 @@ export const Footer = () => {
 					</StyledText>
 				</div>
 			</TopContainer>
-			<Separator horizontal />
+			<StyledSeparator direction={"horizontal"} color="textGray" />
 			<BottomContainer>
 				<Copyright element="p" size="3" variant="sans">
 					Diseño por GTD - 2020. Todos los derechos reservados

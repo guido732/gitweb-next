@@ -5,16 +5,13 @@ import "styles/global.scss";
 import { theme } from "styles/theme";
 // Custom Components
 import Navbar from "components/Navbar/index";
-import Layout from "components/Layout/index";
-import Footer from "components/Home/Footer/index";
+import Footer from "components/Footer/index";
 
 export default function MyApp({ Component, pageProps }) {
 	return (
 		<ThemeProvider theme={theme}>
 			<Navbar />
-			<Layout>
-				<Component {...pageProps} />
-			</Layout>
+			<Component {...pageProps} />
 			<Footer />
 		</ThemeProvider>
 	);
