@@ -28,7 +28,7 @@ export const TopContainer = styled.div`
 `;
 
 export const BrandLogo = styled.img`
-	width: ${theme.spacing[8]};
+	width: ${theme.spacing[9]};
 `;
 
 export const StyledLink = styled.a`
