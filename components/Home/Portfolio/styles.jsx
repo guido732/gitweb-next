@@ -27,4 +27,10 @@ export const PortfolioGrid = styled.div`
 	justify-items: stretch;
 	margin: 0 -${theme.spacing[2]};
 	margin-bottom: ${theme.spacing[8]};
+	@media screen and (min-width: ${theme.breakpoints.md}) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media screen and (min-width: ${theme.breakpoints.lg}) {
+		grid-template-columns: repeat(3, 1fr);
+	}
 `;
