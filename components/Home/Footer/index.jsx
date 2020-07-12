@@ -1,24 +1,37 @@
 // React
 import React from "react";
+// Custom Components
+import Typography from "components/Typography/index";
+// Icons
+import { GitHub, Codepen, Linkedin, Phone } from "react-feather";
 // Styles
-import { StyledFooter, Separator, MediaContainer, Media } from "./styles";
+import { StyledFooter, TopContainer, Separator, BottomContainer, Copyright, MediaContainer, Media } from "./styles";
 
 export const Footer = () => {
 	return (
-		<div>footy</div>
-		// <StyledFooter>
-		// 	<div>{/* Main footer content */}</div>
-		// 	<Separator horizontal />
-		// 	<div>
-		// 		<p>Diseño por GTD - 2020. Todos los derechos reservados</p>
-		// 		<MediaContainer>
-		// 			<Media>1</Media>
-		// 			<Media>2</Media>
-		// 			<Media>3</Media>
-		// 			<Media>4</Media>
-		// 		</MediaContainer>
-		// 	</div>
-		// </StyledFooter>
+		<StyledFooter>
+			<TopContainer>{/* Main footer content */}</TopContainer>
+			<Separator horizontal />
+			<BottomContainer>
+				<Copyright element="p" size="3" variant="sans">
+					Diseño por GTD - 2020. Todos los derechos reservados
+				</Copyright>
+				<MediaContainer>
+					<Media>
+						<GitHub />
+					</Media>
+					<Media>
+						<Codepen />
+					</Media>
+					<Media>
+						<Linkedin />
+					</Media>
+					<Media>
+						<Phone />
+					</Media>
+				</MediaContainer>
+			</BottomContainer>
+		</StyledFooter>
 	);
 };
 
