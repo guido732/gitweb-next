@@ -17,6 +17,10 @@ export const StyledFooter = styled.footer`
 
 export const TopContainer = styled.div`
 	${CenteredContent};
+	margin-bottom: ${theme.spacing[6]};
+	display: grid;
+	gap: ${theme.spacing[4]};
+	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 `;
 
 export const Separator = styled.div`

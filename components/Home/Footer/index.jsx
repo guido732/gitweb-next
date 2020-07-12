@@ -1,7 +1,5 @@
 // React
 import React from "react";
-// Custom Components
-import Typography from "components/Typography/index";
 // Icons
 import { GitHub, Codepen, Linkedin, Phone } from "react-feather";
 // Styles
@@ -10,7 +8,18 @@ import { StyledFooter, TopContainer, Separator, BottomContainer, Copyright, Medi
 export const Footer = () => {
 	return (
 		<StyledFooter>
-			<TopContainer>{/* Main footer content */}</TopContainer>
+			<TopContainer>
+				<img src="public/img/logo-dark.svg" alt="Logo" />
+				<div>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis totam id veniam tenetur animi suscipit?
+				</div>
+				<div>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis totam id veniam tenetur animi suscipit?
+				</div>
+				<div>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis totam id veniam tenetur animi suscipit?
+				</div>
+			</TopContainer>
 			<Separator horizontal />
 			<BottomContainer>
 				<Copyright element="p" size="3" variant="sans">
