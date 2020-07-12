@@ -22,10 +22,9 @@ export const Subtitle = styled(Typography)`
 export const PortfolioGrid = styled.div`
 	width: 100%;
 	display: grid;
-	gap: ${theme.spacing[2]};
 	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	align-items: center;
-	justify-content: center;
+	align-items: stretch;
+	justify-items: stretch;
 	margin: 0 -${theme.spacing[2]};
 	margin-bottom: ${theme.spacing[8]};
 `;

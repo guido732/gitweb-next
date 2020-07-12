@@ -4,6 +4,7 @@ import React from "react";
 import Router from "next/router";
 // Components
 import Button from "components/Button";
+import PortfolioItem from "../PortfolioItem";
 // Styles
 import { PortfolioContainer, Subtitle, PortfolioGrid } from "./styles";
 // Utils
@@ -19,10 +20,8 @@ export const Portfolio = () => {
 		<PortfolioContainer>
 			<div>filter section</div>
 			<PortfolioGrid>
-				{data.map((project) => (
-					<div key={project.id}>
-						<img src="https://picsum.photos/300/300" alt="Random Img" />
-					</div>
+				{data.map((item) => (
+					<PortfolioItem key={item.id} data={item} />
 				))}
 			</PortfolioGrid>
 			<Subtitle element="p" size={4} variant="heading">
