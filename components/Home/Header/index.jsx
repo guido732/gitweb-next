@@ -2,6 +2,7 @@
 import React from "react";
 // Next
 import Link from "next/link";
+import Router from "next/router";
 // Styles
 import { HeaderContainer, StyledSubHeader, StyledHeader, StyledLink } from "./styles";
 // Utils
@@ -9,6 +10,12 @@ import { getBreakpoint } from "utils/getBreakpoint";
 
 export const Header = () => {
 	const isMobile = getBreakpoint() === "xs";
+
+	const handleClick = (e) => {
+		e.preventDefault();
+		Router.push("/contact");
+	};
+
 	return (
 		<HeaderContainer>
 			{isMobile ? (
@@ -23,9 +30,9 @@ export const Header = () => {
 				</StyledHeader>
 			)}
 			<StyledSubHeader element="p" size={6} variant="serif">
-				<Link href="/contact">
-					<StyledLink>Conoceme</StyledLink>
-				</Link>{" "}
+				<StyledLink href="/contact" onClick={handleClick}>
+					Conoceme
+				</StyledLink>{" "}
 				a mí, y más acerca de mi trabajo.
 			</StyledSubHeader>
 		</HeaderContainer>
