@@ -2,6 +2,7 @@
 import styled from "styled-components";
 // Custom Components
 import Typography from "components/Typography";
+import Separator from "components/Separator";
 // Utils
 import { CenteredContent } from "styles/utilities";
 import { theme } from "styles/theme";
@@ -43,9 +44,8 @@ export const StyledText = styled(Typography)`
 	margin-bottom: ${theme.spacing[2]};
 `;
 
-export const Separator = styled.div`
-	width: 100%;
-	border-bottom: 2px solid ${theme.colors.textGray};
+export const StyledSeparator = styled(Separator)`
+	${CenteredContent};
 	margin-bottom: ${theme.spacing[4]};
 `;
 

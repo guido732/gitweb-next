@@ -1,20 +1,33 @@
 // React
 import React from "react";
-// Custom Components
-// Styles
-import { StyledCta, CtaContent } from "./styles";
+// Next
 import Link from "next/link";
+// Components
+import Button from "components/Button";
+// Styles
+import {
+	StyledCta,
+	CtaContent,
+	HeaderContainer,
+	StyledHeader,
+	StyledSubHeader,
+	StyledSeparator,
+	StyledLink,
+} from "./styles";
 
 export const CallToAction = () => {
 	return (
 		<StyledCta>
 			<CtaContent>
-				<div>
-					Demo Text<span>separador</span>
-				</div>
-				<div>Body Text</div>
-				<Link href="">
-					<a>link como botón</a>
+				<HeaderContainer>
+					<StyledHeader element="h2" size={7} variant="heading">
+						¿Te gustó lo que hago?
+					</StyledHeader>
+					<StyledSeparator direction="horizontal" size={1} />
+				</HeaderContainer>
+				<StyledSubHeader variant="sans">No dudes en contactarme!</StyledSubHeader>
+				<Link href="/contact" passHref>
+					<StyledLink>Contactame</StyledLink>
 				</Link>
 			</CtaContent>
 		</StyledCta>
