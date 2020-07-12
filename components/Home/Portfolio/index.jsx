@@ -19,38 +19,11 @@ export const Portfolio = () => {
 		<PortfolioContainer>
 			<div>filter section</div>
 			<PortfolioGrid>
-				<div>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint molestias explicabo quisquam animi voluptates
-					harum consequuntur ipsa id nulla est?
-				</div>
-				<div>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint molestias explicabo quisquam animi voluptates
-					harum consequuntur ipsa id nulla est?
-				</div>
-				<div>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint molestias explicabo quisquam animi voluptates
-					harum consequuntur ipsa id nulla est?
-				</div>
-				<div>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint molestias explicabo quisquam animi voluptates
-					harum consequuntur ipsa id nulla est?
-				</div>
-				<div>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint molestias explicabo quisquam animi voluptates
-					harum consequuntur ipsa id nulla est?
-				</div>
-				<div>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint molestias explicabo quisquam animi voluptates
-					harum consequuntur ipsa id nulla est?
-				</div>
-				<div>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint molestias explicabo quisquam animi voluptates
-					harum consequuntur ipsa id nulla est?
-				</div>
-				<div>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint molestias explicabo quisquam animi voluptates
-					harum consequuntur ipsa id nulla est?
-				</div>
+				{data.map((project) => (
+					<div key={project.id}>
+						<img src="https://picsum.photos/300/300" alt="Random Img" />
+					</div>
+				))}
 			</PortfolioGrid>
 			<Subtitle element="p" size={4} variant="heading">
 				conocé más acerca de mí y cómo trabajo
