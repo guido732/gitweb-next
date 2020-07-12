@@ -36,6 +36,6 @@ const getFontSize = ({ size }) => {
 };
 
 export const StyledElement = styled.div`
-	font-size: ${getFontSize};
 	${getFontStyle};
+	font-size: ${getFontSize};
 `;

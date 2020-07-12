@@ -17,10 +17,30 @@ export const StyledFooter = styled.footer`
 
 export const TopContainer = styled.div`
 	${CenteredContent};
-	margin-bottom: ${theme.spacing[6]};
+	margin-bottom: ${theme.spacing[4]};
 	display: grid;
-	gap: ${theme.spacing[4]};
-	grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	gap: ${theme.spacing[3]};
+	grid-template-columns: 1fr;
+	@media screen and (min-width: ${theme.breakpoints.sm}) {
+		grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	}
+`;
+
+export const BrandLogo = styled.img`
+	width: ${theme.spacing[8]};
+`;
+
+export const StyledLink = styled.a`
+	/*  */
+`;
+
+export const StyledHeader = styled(Typography)`
+	text-transform: uppercase;
+	margin-bottom: ${theme.spacing[2]};
+`;
+
+export const StyledText = styled(Typography)`
+	margin-bottom: ${theme.spacing[2]};
 `;
 
 export const Separator = styled.div`
