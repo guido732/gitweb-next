@@ -1,5 +1,5 @@
 // React
-import React from "react";
+import React, { useState } from "react";
 // Next
 import Router from "next/router";
 // Components
@@ -16,11 +16,28 @@ export const Portfolio = () => {
 		Router.push("/about");
 	};
 
+	const [search, setSearch] = useState("");
+	const [filteredData, setFilteredData] = useState([...data]);
+
+	const handleSearch = (e) => {
+		const { value } = e.target;
+		setSearch(value);
+		if (value) {
+			const filteredData = data.filter((element) => {
+				return element.tags.some((el) => RegExp(value).test(el));
+			});
+			setFilteredData(filteredData);
+		} else {
+			setFilteredData(data);
+		}
+	};
+	console.log(filteredData);
+
 	return (
 		<PortfolioContainer>
-			<div>filter section</div>
+			<input value={search} onChange={handleSearch} />
 			<PortfolioGrid>
-				{data.map((item) => (
+				{filteredData.map((item) => (
 					<PortfolioItem key={item.id} data={item} />
 				))}
 			</PortfolioGrid>
