@@ -4,11 +4,12 @@ import React, { useState } from "react";
 import Router from "next/router";
 // Components
 import Button from "components/Button";
-import PortfolioItem from "../PortfolioItem";
+import PortfolioItem from "components/Home/PortfolioItem";
+import Filter from "components/Home/Filter";
 // Styles
 import { PortfolioContainer, Subtitle, PortfolioGrid } from "./styles";
 // Utils
-import { data } from "./data";
+import { data as inputData } from "./data";
 
 export const Portfolio = () => {
 	const handleClick = (e) => {
@@ -16,26 +17,11 @@ export const Portfolio = () => {
 		Router.push("/about");
 	};
 
-	const [search, setSearch] = useState("");
-	const [filteredData, setFilteredData] = useState([...data]);
-
-	const handleSearch = (e) => {
-		const { value } = e.target;
-		setSearch(value);
-		if (value) {
-			const filteredData = data.filter((element) => {
-				return element.tags.some((el) => RegExp(value).test(el));
-			});
-			setFilteredData(filteredData);
-		} else {
-			setFilteredData(data);
-		}
-	};
-	console.log(filteredData);
+	const [filteredData, setFilteredData] = useState([...inputData]);
 
 	return (
 		<PortfolioContainer>
-			<input value={search} onChange={handleSearch} />
+			<Filter onFilter={setFilteredData} data={inputData} />
 			<PortfolioGrid>
 				{filteredData.map((item) => (
 					<PortfolioItem key={item.id} data={item} />
