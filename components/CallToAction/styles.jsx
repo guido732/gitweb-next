@@ -27,6 +27,7 @@ export const HeaderContainer = styled.div`
 export const StyledHeader = styled(Typography)`
 	flex: 1 0 auto;
 	padding-right: ${theme.spacing[4]};
+	color: ${theme.colors.textDark};
 `;
 
 export const StyledSubHeader = styled(Typography)`

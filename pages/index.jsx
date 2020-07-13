@@ -4,6 +4,7 @@ import Head from "next/head";
 import Layout from "components/Layout";
 import Header from "components/Home/Header";
 import CallToAction from "components/CallToAction";
+import Portfolio from "components/Home/Portfolio";
 
 export default function Home() {
 	return (
@@ -14,6 +15,7 @@ export default function Home() {
 			</Head>
 			<Layout>
 				<Header />
+				<Portfolio />
 			</Layout>
 			<CallToAction />
 		</>

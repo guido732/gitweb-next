@@ -12,6 +12,7 @@ export const HeaderContainer = styled.header`
 
 export const StyledHeader = styled(Typography)`
 	margin-bottom: ${theme.spacing[2]};
+	color: ${theme.colors.textDark};
 `;
 
 export const StyledSubHeader = styled(Typography)`
