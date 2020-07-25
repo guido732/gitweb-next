@@ -8,7 +8,7 @@ export const PortfolioItem = ({ data }) => {
 
 	return (
 		<PortfolioItemContainer>
-			<a href={linkUrl}>
+			<a href={linkUrl} target="_blank" rel="noopener noreferrer">
 				<PortfolioImg src={imgUrl} alt={title} />
 				<Backdrop>
 					<ProjectTitle element="h3" size={6} variant="heading">
