@@ -4,6 +4,7 @@ import styled, { css } from "styled-components";
 import Typography from "components/Typography";
 // Utils
 import { theme } from "styles/theme";
+import Separator from "components/Separator";
 
 export const StyledHeader = styled.header`
 	display: flex;
@@ -37,4 +38,8 @@ export const Graphic = styled(Typography)`
 	color: ${theme.colors.highlight};
 	margin-bottom: -${theme.spacing[8]};
 	display: block;
+`;
+
+export const StyledSeparator = styled(Separator)`
+	border-color: ${theme.colors.grayLight};
 `;

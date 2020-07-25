@@ -5,7 +5,7 @@ import Layout from "components/Layout";
 import CallToAction from "components/CallToAction";
 import Typography from "components/Typography";
 // Styled components
-import { StyledHeader, ImageContainer, DescriptionContainer, Graphic, Title } from "./styles";
+import { StyledHeader, ImageContainer, DescriptionContainer, Graphic, Title, StyledSeparator } from "./styles";
 
 const DummyComponent1 = () => <div>Conocimiento</div>;
 const DummyComponent2 = () => <div>Experiencia</div>;
@@ -47,13 +47,16 @@ const About = () => {
 							Un poco acerca de mi:
 						</Title>
 						<Typography>
-							Diseñador por formación y desarrollador por vocación. Luego de recibirme de Diseñador Industrial y
-							trabajar de ello unos años, estoy volviendo a incursionar en el área del desarrollo web buscando
-							establecerme laboralmente en el rubro. Mi objetivo personal es que mi trabajo me ayude a crecer y poder
-							aportar lo mejor que tengo para generar algo nuevo o mejor.
+							Curioso, pragmático, detallista y siempre estoy buscando algo nuevo para aprender e incorporar.
+						</Typography>
+						<Typography>
+							Me formé como Diseñador Industrial en la UBA y luego migré hacia el desarrollo, enfocándome en el
+							Desarrollo Web Frontend. Actualmente trabajo como desarrollador frontend haciendo foco en stack React,
+							buscando el próximo paso en mi crecimiento profesional.
 						</Typography>
 					</DescriptionContainer>
 				</StyledHeader>
+				<StyledSeparator size={0} />
 				<section>
 					<fieldset>
 						{/* <legend>Elige un color</legend> */}
