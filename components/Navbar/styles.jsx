@@ -12,6 +12,7 @@ export const StyledNavbar = styled.nav`
 	left: 0;
 	padding: ${theme.spacing[2]} 0;
 	box-shadow: ${theme.shadows.main};
+	z-index: 10;
 `;
 
 export const NavbarWrapper = styled.div`
