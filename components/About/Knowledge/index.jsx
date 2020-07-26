@@ -10,12 +10,20 @@ import skills from "./skills";
 const Knowledge = () => {
 	return (
 		<>
-			<Title>Skills y Tecnologías</Title>
+			<Title element="h3" size={4}>
+				Skills y Tecnologías
+			</Title>
 			<SkillGrid>
 				{skills.map((skill) => (
 					<SkillItem key={skill.id} data={skill} />
 				))}
 			</SkillGrid>
+			<Title element="h3" size={4}>
+				Herramientas de Diseño
+			</Title>
+			<Title element="h3" size={4}>
+				Otros conocimientos
+			</Title>
 		</>
 	);
 };
