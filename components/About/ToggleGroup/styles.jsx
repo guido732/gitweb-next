@@ -10,9 +10,13 @@ export const StyledToggle = styled.fieldset`
 	align-items: center;
 	justify-content: center;
 	margin: 0 auto;
-	width: max-content;
 	border: none;
 	margin-bottom: ${theme.spacing[8]};
+	flex-flow: column nowrap;
+	@media screen and (min-width: ${theme.breakpoints.sm}) {
+		flex-flow: row nowrap;
+		width: max-content;
+	}
 `;
 
 const getCheckedStyles = css`
@@ -28,22 +32,28 @@ const getCheckedStyles = css`
 
 export const ToggleLabel = styled.label`
 	${fontHeadings}
+	width: 100%;
 	padding: ${theme.spacing[4]};
 	cursor: pointer;
 	user-select: none;
 	color: ${theme.colors.main};
 	border: 2px solid ${theme.colors.textDark};
-  border-right-width: 0;
-  background-color: ${theme.colors.textDark};
-  transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
-  &:last-child {
-    border-right-width: 2px;
-  }
-	&:hover, &:focus {
-    color: ${theme.colors.textDark};
-    background-color: ${theme.colors.main};
+	background-color: ${theme.colors.textDark};
+	transition: background-color 0.2s ease, border 0.2s ease, color 0.2s ease;
+	text-align: center;
+	${({ checked }) => checked && getCheckedStyles};
+	@media screen and (min-width: ${theme.breakpoints.sm}) {
+		flex-flow: row nowrap;
+		border-right-width: 0;
+		&:last-child {
+			border-right-width: 2px;
+		}
+		&:hover,
+		&:focus {
+			color: ${theme.colors.textDark};
+			background-color: ${theme.colors.main};
+		}
 	}
-	${({ checked }) => checked && getCheckedStyles}
 `;
 
 export const ToggleInput = styled.input`
