@@ -133,17 +133,17 @@ export const skills = [
 export const designSkills = [
 	{
 		id: 0,
-		label: "Adobe Illustrator",
+		label: "Illustrator",
 		icon: <Ai />,
 	},
 	{
 		id: 1,
-		label: "Adobe Photoshop",
+		label: "Photoshop",
 		icon: <Ps />,
 	},
 	{
 		id: 2,
-		label: "Adobe XD",
+		label: "XD",
 		icon: <Xd />,
 	},
 	{
@@ -159,8 +159,12 @@ export const otherSkills = [
 		label: "Inglés Bilingüe",
 	},
 	{
+		id: 5,
+		label: "Liderazgo",
+	},
+	{
 		id: 2,
-		label: "Project Management",
+		label: "Gestión de proyectos",
 	},
 	{
 		id: 3,
