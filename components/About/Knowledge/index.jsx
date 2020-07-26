@@ -5,7 +5,7 @@ import SkillItem from "./SkillItem";
 // Styled Components
 import { Title, SkillGrid } from "./styles";
 // Utils
-import skills from "./skills";
+import { skills, designSkills, otherSkills } from "./data";
 
 const Knowledge = () => {
 	return (
@@ -21,9 +21,19 @@ const Knowledge = () => {
 			<Title element="h3" size={4}>
 				Herramientas de Diseño
 			</Title>
+			<SkillGrid>
+				{designSkills.map((skill) => (
+					<SkillItem key={skill.id} data={skill} />
+				))}
+			</SkillGrid>
 			<Title element="h3" size={4}>
 				Otros conocimientos
 			</Title>
+			<SkillGrid>
+				{otherSkills.map((skill) => (
+					<SkillItem key={skill.id} data={skill} />
+				))}
+			</SkillGrid>
 		</>
 	);
 };
