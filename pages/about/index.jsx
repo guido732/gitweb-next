@@ -5,10 +5,10 @@ import Layout from "components/Layout";
 import CallToAction from "components/CallToAction";
 import Typography from "components/Typography";
 import ToggleGroup from "components/About/ToggleGroup";
+import Knowledge from "components/About/Knowledge";
 // Styled components
 import { StyledHeader, ImageContainer, DescriptionContainer, Graphic, Title, StyledSeparator } from "./styles";
 
-const DummyComponent1 = () => <div>Conocimiento</div>;
 const DummyComponent2 = () => <div>Experiencia</div>;
 const DummyComponent3 = () => <div>Formación</div>;
 
@@ -18,13 +18,13 @@ const About = () => {
 	const getTabContent = () => {
 		switch (selectedTab) {
 			case "knowledge":
-				return <DummyComponent1 />;
+				return <Knowledge />;
 			case "experience":
 				return <DummyComponent2 />;
 			case "formation":
 				return <DummyComponent3 />;
 			default:
-				return <DummyComponent1 />;
+				return <Knowledge />;
 		}
 	};
 
