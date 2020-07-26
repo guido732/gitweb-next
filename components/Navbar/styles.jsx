@@ -64,7 +64,13 @@ export const LinkListItem = styled.li`
 	}
 `;
 
-export const StyledLink = styled.a``;
+export const StyledLink = styled.a`
+	transition: color 0.2s ease;
+	&:hover,
+	&:focus {
+		color: ${theme.colors.highlight};
+	}
+`;
 
 export const IconButton = styled.button`
 	background-color: ${theme.colors.grayLight};
