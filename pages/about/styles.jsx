@@ -41,5 +41,7 @@ export const Graphic = styled(Typography)`
 `;
 
 export const StyledSeparator = styled(Separator)`
-	border-color: ${theme.colors.grayLight};
+	border-color: ${theme.colors.textGray};
+	opacity: 0.2;
+	margin-bottom: ${theme.spacing[8]};
 `;

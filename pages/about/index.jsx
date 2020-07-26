@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import Layout from "components/Layout";
 import CallToAction from "components/CallToAction";
 import Typography from "components/Typography";
+import ToggleGroup from "components/About/ToggleGroup";
 // Styled components
 import { StyledHeader, ImageContainer, DescriptionContainer, Graphic, Title, StyledSeparator } from "./styles";
 
@@ -25,11 +26,6 @@ const About = () => {
 			default:
 				return <DummyComponent1 />;
 		}
-	};
-
-	const setTabcontent = (e) => {
-		const { id } = e.target;
-		setSelectedTab(id);
 	};
 
 	return (
@@ -58,42 +54,7 @@ const About = () => {
 				</StyledHeader>
 				<StyledSeparator size={0} />
 				<section>
-					<fieldset>
-						{/* <legend>Elige un color</legend> */}
-						<label>
-							<input
-								type="radio"
-								name="color"
-								value="azul"
-								id="knowledge"
-								onChange={setTabcontent}
-								checked={selectedTab === "knowledge"}
-							/>
-							Conocimiento
-						</label>
-						<label>
-							<input
-								type="radio"
-								name="color"
-								value="negro"
-								id="experience"
-								onChange={setTabcontent}
-								checked={selectedTab === "experience"}
-							/>
-							Experiencia
-						</label>
-						<label>
-							<input
-								type="radio"
-								name="color"
-								value="amarillo"
-								id="formation"
-								onChange={setTabcontent}
-								checked={selectedTab === "formation"}
-							/>
-							Formación
-						</label>
-					</fieldset>
+					<ToggleGroup onChange={setSelectedTab} activeTab={selectedTab} />
 					{getTabContent()}
 				</section>
 			</Layout>
