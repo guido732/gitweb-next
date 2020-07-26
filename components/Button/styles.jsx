@@ -14,7 +14,8 @@ export const StyledButton = styled.button`
 	border: none;
 	transition: background-color 0.3s ease;
 	cursor: pointer;
-	&:hover {
+	&:hover,
+	&:focus {
 		background-color: ${theme.colors.highlight};
 		color: ${theme.colors.main};
 	}

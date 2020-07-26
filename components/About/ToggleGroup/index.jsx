@@ -13,7 +13,6 @@ const ToggleGroup = ({ onChange, activeTab, name }) => {
 
 	return (
 		<StyledToggle>
-			{/* <legend>Elige un color</legend> */}
 			{Data.map((el) => (
 				<ToggleLabel key={el.id} checked={activeTab === el.id}>
 					<ToggleInput

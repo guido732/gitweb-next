@@ -2,6 +2,7 @@
 import styled, { css } from "styled-components";
 // Utils
 import { theme } from "styles/theme";
+import { SRHidden } from "styles/utilities";
 import { fontHeadings } from "components/Typography/styles";
 
 export const StyledToggle = styled.fieldset`
@@ -46,5 +47,7 @@ export const ToggleLabel = styled.label`
 `;
 
 export const ToggleInput = styled.input`
-	display: none;
+	opacity: 0;
+	width: 0;
+	${SRHidden};
 `;
