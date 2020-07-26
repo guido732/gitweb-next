@@ -3,17 +3,17 @@ import styled, { css } from "styled-components";
 // Utils
 import { theme } from "styles/theme";
 
-const fontHeadings = css`
+export const fontHeadings = css`
 	font-family: "Montserrat", sans-serif;
 	font-weight: 700;
 `;
 
-const fontSerif = css`
+export const fontSerif = css`
 	font-family: "Playfair Display", serif;
 	font-weight: 500;
 `;
 
-const fontSans = css`
+export const fontSans = css`
 	font-family: "Source Sans Pro", sans-serif;
 	font-weight: 300;
 `;
