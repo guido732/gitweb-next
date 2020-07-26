@@ -54,7 +54,7 @@ const About = () => {
 				</StyledHeader>
 				<StyledSeparator size={0} />
 				<section>
-					<ToggleGroup onChange={setSelectedTab} activeTab={selectedTab} />
+					<ToggleGroup onChange={setSelectedTab} activeTab={selectedTab} name="about-toggle" />
 					{getTabContent()}
 				</section>
 			</Layout>

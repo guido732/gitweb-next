@@ -5,7 +5,7 @@ import { StyledToggle, ToggleLabel, ToggleInput } from "./styles";
 // Utils
 import Data from "./toggleData";
 
-const ToggleGroup = ({ onChange, activeTab }) => {
+const ToggleGroup = ({ onChange, activeTab, name }) => {
 	const setTabcontent = (e) => {
 		const { id } = e.target;
 		onChange(id);
@@ -15,16 +15,16 @@ const ToggleGroup = ({ onChange, activeTab }) => {
 		<StyledToggle>
 			{/* <legend>Elige un color</legend> */}
 			{Data.map((el) => (
-				<ToggleLabel key={el.id}>
+				<ToggleLabel key={el.id} checked={activeTab === el.id}>
 					<ToggleInput
 						type="radio"
-						name="tabs"
+						name={name}
 						value={el.id}
 						id={el.id}
 						onChange={setTabcontent}
 						checked={activeTab === el.id}
 					/>
-					{el.label}
+					{el.label.toUpperCase()}
 				</ToggleLabel>
 			))}
 		</StyledToggle>
