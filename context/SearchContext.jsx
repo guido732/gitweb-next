@@ -3,6 +3,9 @@ import { useReducer, useContext, createContext } from "react";
 const SearchStateContext = createContext();
 const SearchDispatchContext = createContext();
 
+export const useSearch = () => useContext(SearchStateContext);
+export const useDispatchSearch = () => useContext(SearchDispatchContext);
+
 const reducer = (state, action) => {
 	switch (action.type) {
 		case "CLEAR":
@@ -16,13 +19,9 @@ const reducer = (state, action) => {
 
 export const SearchProvider = ({ children }) => {
 	const [state, dispatch] = useReducer(reducer, "");
-
 	return (
 		<SearchDispatchContext.Provider value={dispatch}>
 			<SearchStateContext.Provider value={state}>{children}</SearchStateContext.Provider>
 		</SearchDispatchContext.Provider>
 	);
 };
-
-export const useSearch = () => useContext(SearchStateContext);
-export const useDispatchSearch = () => useContext(SearchDispatchContext);

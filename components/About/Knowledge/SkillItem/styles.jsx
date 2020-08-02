@@ -3,7 +3,7 @@ import styled from "styled-components";
 // Utils
 import { theme } from "styles/theme";
 
-export const StyledSkill = styled.div`
+export const StyledSkill = styled.a`
 	display: flex;
 	flex: 0 1 175px;
 	align-items: center;
@@ -15,6 +15,7 @@ export const StyledSkill = styled.div`
 	background-color: ${theme.colors.secondary};
 	text-align: center;
 	transition: color 0.2s ease;
+	cursor: pointer;
 	&:hover,
 	&:focus {
 		color: ${theme.colors.highlight};
