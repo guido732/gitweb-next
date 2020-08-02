@@ -12,7 +12,7 @@ export const Filter = ({ data, onFilter }) => {
 	useEffect(() => {
 		if (searchTerm) {
 			const filteredData = data.filter((element) => {
-				return element.tags.some((el) => RegExp(searchTerm).test(el));
+				return element.tags.some((el) => RegExp(searchTerm, "i").test(el));
 			});
 			onFilter(filteredData);
 		} else {
