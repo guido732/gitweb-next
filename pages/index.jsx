@@ -1,5 +1,7 @@
 // Next
 import Head from "next/head";
+// Context Provider
+import { SearchProvider } from "context/SearchContext";
 // Components
 import Layout from "components/Layout";
 import Header from "components/Home/Header";
@@ -15,7 +17,9 @@ export default function Home() {
 			</Head>
 			<Layout>
 				<Header />
-				<Portfolio />
+				<SearchProvider>
+					<Portfolio />
+				</SearchProvider>
 			</Layout>
 			<CallToAction />
 		</>
