@@ -12,7 +12,7 @@ import { StyledSkill } from "./styles";
 const SkillItem = ({ data }) => {
 	const dispatch = useDispatchSearch();
 
-	const handleSearch = (e, payload) => {
+	const handleSearch = (payload) => (e) => {
 		e.preventDefault();
 		if (payload) {
 			dispatch({ type: "FILTER", payload });
@@ -24,7 +24,7 @@ const SkillItem = ({ data }) => {
 		}
 	};
 	return (
-		<StyledSkill textOnly={!data.icon} onClick={(e) => handleSearch(e, data.keyword)} href="/">
+		<StyledSkill hasIcon={!!data.icon} hasLink={!!data.keyword} onClick={handleSearch(data.keyword)} href="/">
 			{data.icon}
 			<Typography variant="heading">{data.label}</Typography>
 		</StyledSkill>
