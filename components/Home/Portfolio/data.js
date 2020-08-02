@@ -5,7 +5,7 @@ export const data = [
 		subtitle: "Proyecto del sitio actual hecho con React + NextJs + Styled Components",
 		imgUrl: "/img/pofo-thumbs/gitweb.jpg",
 		linkUrl: "https://github.com/guido732/gitweb2/",
-		tags: ["react", "nextjs", "next", "styled components", "hooks", "functional components"],
+		tags: ["javascript", "js", "react", "nextjs", "next", "styled components", "hooks", "functional components"],
 	},
 	{
 		id: 2,
@@ -14,11 +14,14 @@ export const data = [
 		imgUrl: "/img/pofo-thumbs/ecommerce.jpg",
 		linkUrl: "https://github.com/guido732/ecommerce-site/",
 		tags: [
+			"javascript",
+			"js",
 			"react",
 			"hooks",
 			"redux",
 			"sagas",
 			"reselect",
+			"css",
 			"scss",
 			"sass",
 			"firebase",
@@ -40,7 +43,7 @@ export const data = [
 		subtitle: "Teclados mecánicos animados hechos con HTML/CSS/JS vanilla",
 		imgUrl: "/img/pofo-thumbs/keyboard.jpg",
 		linkUrl: "https://github.com/guido732/mechanical-keyboard/",
-		tags: ["html", "vanilla", "js", "css", "scss", "sass"],
+		tags: ["html", "vanilla", "js", "javascript", "css", "scss", "sass"],
 	},
 	{
 		id: 4,
@@ -79,6 +82,8 @@ export const data = [
 		imgUrl: "/img/pofo-thumbs/cra.jpg",
 		linkUrl: "https://github.com/guido732/cra-testing-setup/",
 		tags: [
+			"javascript",
+			"js",
 			"react",
 			"testing",
 			"cra",
@@ -107,7 +112,7 @@ export const data = [
 			"Proyecto hecho en NodeJs + CSV Parser + jsDOM para realizar generación en serie de archivos en base a un archivo template base y una base de datos provista en CSV",
 		imgUrl: "/img/pofo-thumbs/node.jpg",
 		linkUrl: "https://github.com/guido732/auto-template-edit/",
-		tags: ["node", "script", "nodejs", "csv", "jsdom", "dom"],
+		tags: ["node", "nodejs", "script", "nodejs", "csv", "jsdom", "dom"],
 	},
 	{
 		id: 9,

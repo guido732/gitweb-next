@@ -14,11 +14,17 @@ const SkillItem = ({ data }) => {
 
 	const handleSearch = (e, payload) => {
 		e.preventDefault();
-		dispatch({ type: "FILTER", payload });
-		Router.push("/");
+		if (payload) {
+			dispatch({ type: "FILTER", payload });
+			window.scrollTo({
+				top: 0,
+				left: 0,
+			});
+			Router.push("/");
+		}
 	};
 	return (
-		<StyledSkill textOnly={!data.icon} onClick={(e) => handleSearch(e, data.label)} href="/">
+		<StyledSkill textOnly={!data.icon} onClick={(e) => handleSearch(e, data.keyword)} href="/">
 			{data.icon}
 			<Typography variant="heading">{data.label}</Typography>
 		</StyledSkill>
