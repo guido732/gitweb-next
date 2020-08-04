@@ -41,7 +41,7 @@ export const Footer = () => {
 					</Link>
 				</div>
 				<div>
-					<Link href="/contact" passHref={true}>
+					<Link /* href="/contact" */ href="" passHref={true}>
 						<StyledLink>
 							<StyledHeader element="h3" size={4} variant="heading">
 								Información de contacto

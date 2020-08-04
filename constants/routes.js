@@ -9,9 +9,9 @@ export const routes = [
 		path: "/about",
 		label: "Acerca",
 	},
-	{
-		name: "contact",
-		path: "/contact",
-		label: "Contacto",
-	},
+	// {
+	// 	name: "contact",
+	// 	path: "/contact",
+	// 	label: "Contacto",
+	// },
 ];
