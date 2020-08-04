@@ -65,7 +65,7 @@ const About = () => {
 					{getTabContent()}
 				</section>
 			</Layout>
-			<CallToAction />
+			{/* <CallToAction /> */}
 		</>
 	);
 };
