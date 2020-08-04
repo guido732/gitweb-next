@@ -7,7 +7,14 @@ import Typography from "components/Typography";
 import ToggleGroup from "components/About/ToggleGroup";
 import Knowledge from "components/About/Knowledge";
 // Styled components
-import { StyledHeader, ImageContainer, DescriptionContainer, Graphic, Title, StyledSeparator } from "./styles";
+import {
+	StyledHeader,
+	ImageContainer,
+	DescriptionContainer,
+	Graphic,
+	Title,
+	StyledSeparator,
+} from "pageStyles/about/styles";
 
 const DummyComponent2 = () => <div>Experiencia</div>;
 const DummyComponent3 = () => <div>Formación</div>;
