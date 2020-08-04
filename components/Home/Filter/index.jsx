@@ -1,22 +1,31 @@
 // React
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+// Context
+import { useSearch, useDispatchSearch } from "context/SearchContext";
 // Styled components
 import { FilterContainer, StyledInput, FilterText } from "./styles";
 
 export const Filter = ({ data, onFilter }) => {
-	const [search, setSearch] = useState("");
+	const searchTerm = useSearch();
+	const dispatch = useDispatchSearch();
 
-	const handleSearch = (e) => {
-		const { value } = e.target;
-		setSearch(value);
-		if (value) {
+	useEffect(() => {
+		if (searchTerm) {
 			const filteredData = data.filter((element) => {
-				return element.tags.some((el) => RegExp(value).test(el));
+				return element.tags.some((el) => RegExp(searchTerm, "i").test(el));
 			});
 			onFilter(filteredData);
 		} else {
 			onFilter(data);
 		}
+	}, [searchTerm, onFilter]);
+
+	const handleSearch = (e) => {
+		const { value } = e.target;
+		dispatch({
+			type: "FILTER",
+			payload: value,
+		});
 	};
 
 	return (
@@ -24,7 +33,7 @@ export const Filter = ({ data, onFilter }) => {
 			<FilterText element="p" variant="heading" size={5}>
 				Filtrar proyectos por tecnología
 			</FilterText>
-			<StyledInput value={search} onChange={handleSearch} />
+			<StyledInput value={searchTerm} onChange={handleSearch} />
 		</FilterContainer>
 	);
 };

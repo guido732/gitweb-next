@@ -1,5 +1,7 @@
 // Styled Components
 import { ThemeProvider } from "styled-components";
+// Context Provider
+import { SearchProvider } from "context/SearchContext";
 // Styles
 import { GlobalStyles } from "styles/global";
 import { theme } from "styles/theme";
@@ -12,9 +14,11 @@ export default function MyApp({ Component, pageProps }) {
 		<>
 			<GlobalStyles />
 			<ThemeProvider theme={theme}>
-				<Navbar />
-				<Component {...pageProps} />
-				<Footer />
+				<SearchProvider>
+					<Navbar />
+					<Component {...pageProps} />
+					<Footer />
+				</SearchProvider>
 			</ThemeProvider>
 		</>
 	);

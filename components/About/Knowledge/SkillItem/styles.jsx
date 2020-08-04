@@ -3,11 +3,11 @@ import styled from "styled-components";
 // Utils
 import { theme } from "styles/theme";
 
-export const StyledSkill = styled.div`
+export const StyledSkill = styled.a`
 	display: flex;
 	flex: 0 1 175px;
 	align-items: center;
-	justify-content: ${({ textOnly }) => (textOnly ? "center" : "flex-end")};
+	justify-content: ${({ hasIcon }) => (hasIcon ? "flex-end" : "center")};
 	flex-flow: column nowrap;
 	margin: 0 ${theme.spacing[2]};
 	margin-bottom: ${theme.spacing[4]};
@@ -15,6 +15,7 @@ export const StyledSkill = styled.div`
 	background-color: ${theme.colors.secondary};
 	text-align: center;
 	transition: color 0.2s ease;
+	cursor: ${({ hasLink }) => (hasLink ? "pointer" : "default")};
 	&:hover,
 	&:focus {
 		color: ${theme.colors.highlight};
