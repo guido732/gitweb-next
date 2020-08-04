@@ -2,9 +2,9 @@
 import React, { useState } from "react";
 // Custom Components
 import Layout from "components/Layout";
-import CallToAction from "components/CallToAction";
+// import CallToAction from "components/CallToAction";
 import Typography from "components/Typography";
-import ToggleGroup from "components/About/ToggleGroup";
+// import ToggleGroup from "components/About/ToggleGroup";
 import Knowledge from "components/About/Knowledge";
 // Styled components
 import {
@@ -61,7 +61,7 @@ const About = () => {
 				</StyledHeader>
 				<StyledSeparator size={0} />
 				<section>
-					<ToggleGroup onChange={setSelectedTab} activeTab={selectedTab} name="about-toggle" />
+					{/* <ToggleGroup onChange={setSelectedTab} activeTab={selectedTab} name="about-toggle" /> */}
 					{getTabContent()}
 				</section>
 			</Layout>
