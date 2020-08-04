@@ -4,7 +4,7 @@ export const data = [
 		title: "GIT Web",
 		subtitle: "Proyecto del sitio actual hecho con React + NextJs + Styled Components",
 		imgUrl: "/img/pofo-thumbs/gitweb.jpg",
-		linkUrl: "https://github.com/guido732/gitweb2/",
+		linkUrl: "https://github.com/guido732/gitweb-next/",
 		tags: ["javascript", "js", "react", "nextjs", "next", "styled components", "hooks", "functional components"],
 	},
 	{
