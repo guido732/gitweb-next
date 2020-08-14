@@ -1,7 +1,7 @@
 import { useReducer, useContext, createContext } from "react";
 
 const SearchStateContext = createContext("");
-const SearchDispatchContext = createContext({});
+const SearchDispatchContext = createContext({} as ({}) => void);
 
 export const useSearch = () => useContext(SearchStateContext);
 export const useDispatchSearch = () => useContext(SearchDispatchContext);
