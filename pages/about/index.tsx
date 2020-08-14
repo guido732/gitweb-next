@@ -20,7 +20,7 @@ const DummyComponent2 = () => <div>Experiencia</div>;
 const DummyComponent3 = () => <div>Formación</div>;
 
 const About = () => {
-	const [selectedTab, setSelectedTab] = useState("knowledge");
+	const [selectedTab /* setSelectedTab */] = useState("knowledge");
 
 	const getTabContent = () => {
 		switch (selectedTab) {
