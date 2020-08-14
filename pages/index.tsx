@@ -3,7 +3,7 @@ import Head from "next/head";
 // Components
 import Layout from "components/Layout";
 import Header from "components/Home/Header";
-import CallToAction from "components/CallToAction";
+// import CallToAction from "components/CallToAction";
 import Portfolio from "components/Home/Portfolio";
 
 export default function Home() {
