@@ -1,5 +1,5 @@
 //Styled Components
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 // Custom Components
 import Typography from "components/Typography";
 // Utils

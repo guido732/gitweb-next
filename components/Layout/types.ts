@@ -1,3 +1,3 @@
 export interface ILayout {
-	children: React.Component;
+	children: any;
 }
