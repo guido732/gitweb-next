@@ -1,4 +1,8 @@
-export const spacing = {
+type SpacingTypes = {
+	[name: number]: string;
+};
+
+export const spacing: SpacingTypes = {
 	0: "1px",
 	1: "0.25rem",
 	2: "0.5rem",
