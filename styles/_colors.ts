@@ -1,4 +1,8 @@
-export const colors = {
+type ColorTypes = {
+	[name: string]: string;
+};
+
+export const colors: ColorTypes = {
 	main: "#fff",
 	secondary: "#f1f1f1",
 	highlight: "#e53247",
