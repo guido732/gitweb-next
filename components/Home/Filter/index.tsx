@@ -3,7 +3,7 @@ import React, { FC, useEffect } from "react";
 // Context
 import { useSearch, useDispatchSearch } from "context/SearchContext";
 // Styled components
-import { FilterContainer, StyledInput, FilterText } from "./styles";
+import { FilterContainer, StyledInput /* FilterText */ } from "./styles";
 // Types
 import { IFilter } from "./types";
 
@@ -32,10 +32,14 @@ export const Filter: FC<IFilter> = ({ data, onFilter }) => {
 
 	return (
 		<FilterContainer>
-			<FilterText element="p" variant="heading" size={5}>
+			{/* <FilterText element="p" variant="heading" size={5}>
 				Filtrar proyectos por tecnología
-			</FilterText>
-			<StyledInput value={searchTerm} onChange={handleSearch} />
+			</FilterText> */}
+			<StyledInput
+				value={searchTerm}
+				onChange={handleSearch}
+				placeholder="Ingresá un término para filtrar los proyectos"
+			/>
 		</FilterContainer>
 	);
 };
