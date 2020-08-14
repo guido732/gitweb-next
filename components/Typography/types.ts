@@ -2,7 +2,7 @@ export interface ITypography {
 	element?: string;
 	size?: number;
 	variant?: string;
-	children: string;
+	children: any;
 }
 
 export interface IStyledElement {

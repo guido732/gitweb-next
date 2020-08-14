@@ -61,7 +61,7 @@ export const Footer = () => {
 			</TopContainer>
 			<StyledSeparator direction="horizontal" color="textGray" />
 			<BottomContainer>
-				<Copyright element="p" size="3" variant="sans">
+				<Copyright element="p" size={3} variant="sans">
 					Diseño por GTD - 2020. Todos los derechos reservados
 				</Copyright>
 				<MediaContainer>

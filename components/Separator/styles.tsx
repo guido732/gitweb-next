@@ -11,7 +11,7 @@ const verticalStyles = css`
 	border-right-style: solid;
 `;
 
-const getDirectionStyles = ({ direction }: { direction: string }) => {
+const getDirectionStyles = (direction: string) => {
 	switch (direction) {
 		case "horizontal":
 			return horizontalStyles;
@@ -23,14 +23,14 @@ const getDirectionStyles = ({ direction }: { direction: string }) => {
 };
 
 interface SeparatorTypes {
-	direction: string;
-	color: string;
-	size: number;
+	direction?: string;
+	color?: string;
+	size?: number;
 }
 
 export const SeparatorContainer = styled.div<SeparatorTypes>`
 	width: 100%;
-	border-color: ${({ color }) => theme.colors[color] || theme.colors.highlight};
-	border-width: ${({ size }) => theme.spacing[size] || "2px"};
-	${getDirectionStyles};
+	border-color: ${({ color }) => (color ? theme.colors[color] : theme.colors.highlight)};
+	border-width: ${({ size }) => (size ? theme.spacing[size] : "2px")};
+	${({ direction }) => (direction ? getDirectionStyles(direction) : getDirectionStyles(""))};
 `;

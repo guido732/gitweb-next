@@ -5,7 +5,7 @@ import { breakpoints } from "./_breakpoints";
 type ThemeTypes = {
 	colors: ColorTypes;
 	spacing: SpacingTypes;
-	shadows: Object;
+	shadows: ShadowTypes;
 	breakpoints: BreakpointTypes;
 };
 
@@ -17,6 +17,9 @@ type SpacingTypes = {
 };
 type BreakpointTypes = {
 	[key: string]: string;
+};
+type ShadowTypes = {
+	main: string;
 };
 
 export const theme: ThemeTypes = {
