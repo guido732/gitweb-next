@@ -14,7 +14,7 @@
 
 # production
 /build
-/build-test
+/test_docs
 
 # misc
 .DS_Store
