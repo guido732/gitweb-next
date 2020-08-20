@@ -5,7 +5,8 @@
 	"scripts": {
 		"dev": "next dev",
 		"ts": "tsc --noEmit",
-		"build": "next build && next export -o docs",
+		"build": "next build && next export -o test_docs",
+		"build-test": "next build && next export -o docs",
 		"start": "next start",
 		"deploy": "next build && next export -o docs && git checkout -- docs/CNAME && git checkout -- docs/.nojekyll && git add docs && git commit -m \"chore: regen site\" && git push origin develop"
 	},
@@ -29,7 +30,7 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-push": "yarn ts && yarn build"
+			"pre-push": "yarn ts && yarn build-test"
 		}
 	}
 }
