@@ -64,7 +64,7 @@ export const MediaContainer = styled.div`
 	justify-content: center;
 `;
 
-export const Media = styled.div`
+export const Media = styled.a`
 	margin-right: ${theme.spacing[4]};
 	margin-top: 0.25rem;
 	&:last-child {
