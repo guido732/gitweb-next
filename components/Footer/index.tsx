@@ -3,7 +3,7 @@ import React from "react";
 // Next
 import Link from "next/link";
 // Icons
-import { GitHub, Codepen, Linkedin, Phone } from "react-feather";
+import { GitHub, Codepen, Linkedin, Send } from "react-feather";
 // Styles
 import {
 	StyledFooter,
@@ -62,20 +62,25 @@ export const Footer = () => {
 			<StyledSeparator direction="horizontal" color="textGray" />
 			<BottomContainer>
 				<Copyright element="p" size={3} variant="sans">
-					Diseño por GTD - 2020. Todos los derechos reservados
+					Diseño por GTD - 2020 - v{process.env.NEXT_PUBLIC_SEMVER}
 				</Copyright>
 				<MediaContainer>
-					<Media>
+					<Media href="https://github.com/guido732/" title="Github" target="_blank" rel="noopener noreferrer">
 						<GitHub />
 					</Media>
-					<Media>
-						<Codepen />
-					</Media>
-					<Media>
+					<Media
+						href="https://www.linkedin.com/in/g-torres/"
+						title="LinkedIn"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
 						<Linkedin />
 					</Media>
-					<Media>
-						<Phone />
+					<Media href="https://codepen.io/guido732" title="Codepen" target="_blank" rel="noopener noreferrer">
+						<Codepen />
+					</Media>
+					<Media href="https://t.me/guido732" title="Telegram" target="_blank" rel="noopener noreferrer">
+						<Send />
 					</Media>
 				</MediaContainer>
 			</BottomContainer>

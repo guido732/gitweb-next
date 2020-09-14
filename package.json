@@ -1,16 +1,18 @@
 {
 	"name": "gitweb-next",
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",
 		"ts": "tsc --noEmit",
 		"build": "next build && next export -o docs",
+		"build-test": "next build && next export -o test_docs",
 		"start": "next start",
 		"deploy": "next build && next export -o docs && git checkout -- docs/CNAME && git checkout -- docs/.nojekyll && git add docs && git commit -m \"chore: regen site\" && git push origin develop"
 	},
 	"dependencies": {
 		"@svgr/webpack": "^5.4.0",
+		"husky": "^4.2.5",
 		"next": "9.4.4",
 		"react": "16.13.1",
 		"react-dom": "16.13.1",
@@ -25,5 +27,10 @@
 		"@types/styled-components": "^5.1.2",
 		"babel-plugin-styled-components": "^1.11.1",
 		"typescript": "^3.9.7"
+	},
+	"husky": {
+		"hooks": {
+			"pre-push": "yarn ts && yarn build-test"
+		}
 	}
 }
